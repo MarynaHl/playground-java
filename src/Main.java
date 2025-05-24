@@ -1,13 +1,8 @@
-import java.io.IOException;
-
+import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-        int x;
-        try {
-            x = System.in.read(); // Зчитує один символ з клавіатури
-            System.out.println("code = " + x + " x = " + (char)x);
-        } catch (IOException e) {
-            e.printStackTrace(); // Виводить помилку, якщо вона сталася
-        }
+        Scanner scan = new Scanner(System.in);
+        String input = scan.next();
+        System.out.println("hello " + input);
     }
 }
