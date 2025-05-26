@@ -1,14 +1,25 @@
-import java.util.Scanner;
-
 public class Main {
+
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int secondInput = scanner.nextInt();
-        int hours = (secondInput/3600)%24;
-        int minutes = (secondInput/60)%60;
-        int seconds = secondInput%60;
+        String typeOfDay;
+        String day = "Monday";
 
-        System.out.printf("%d:%02d:%02d", hours, minutes, seconds);
+        switch (day) {
+            case "Monday":
+            case "Tuesday":
+            case "Wednesday":
+            case "Thursday":
+            case "Friday":
+                typeOfDay = "Робочий день";
+                break;
+            case "Saturday":
+            case "Sunday":
+                typeOfDay = "Вихідний";
+                break;
+            default:
+                typeOfDay = "Невірне значення";
+        }
 
+        System.out.println(typeOfDay);
     }
 }
