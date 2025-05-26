@@ -2,7 +2,7 @@ public class Main {
 
     public static void main(String[] args) {
         String typeOfDay;
-        String day = "Monday";
+        String day = "j";
 
         switch (day) {
             case "Monday":
