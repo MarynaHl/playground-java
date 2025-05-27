@@ -1,17 +1,32 @@
 import java.util.Scanner;
 
 public class Main {
-    final static int PASSWORD = 133976;
+   public static void main(String[] args) {
+       Scanner scanner = new Scanner(System.in);
 
-    public static void main (String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int input = scanner.nextInt();
+       int a =  scanner.nextInt();
+       int b = scanner.nextInt();
+       int h = scanner.nextInt();
 
-        if (input == PASSWORD) {
-            System.out.println("Hello, Agent");
+               if (a <= b && a < h) {
+                   System.out.println("Impossible");
+                   return;
+               }
 
-        } else {
-            System.out.println("Access denied");
-        }
-    }
+               int heigh = 0;
+               int days = 0;
+
+               while (true) {
+                   days++;
+                   heigh += a;
+
+                   if (heigh >= h) {
+                       System.out.println(days);
+                       break;
+
+                   }
+                   heigh -= b;
+               }
+
+   }
 }
