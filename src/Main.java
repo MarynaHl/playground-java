@@ -1,32 +1,23 @@
 import java.util.Scanner;
 
 public class Main {
-   public static void main(String[] args) {
-       Scanner scanner = new Scanner(System.in);
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
 
-       int a =  scanner.nextInt();
-       int b = scanner.nextInt();
-       int h = scanner.nextInt();
+        int bill = scanner.nextInt();
+        if (bill < 0) {
+            System.out.println("Bill total amount cannot be negative");
+            return;
+        }
+        int friends = scanner.nextInt();
+        if (friends <= 0) {
+            System.out.println("Number of friends cannot be negative");
+            return;
+        }
 
-               if (a <= b && a < h) {
-                   System.out.println("Impossible");
-                   return;
-               }
+        int totalWithTip = bill + bill / 10;
+        int partToPay = totalWithTip / friends;
 
-               int heigh = 0;
-               int days = 0;
-
-               while (true) {
-                   days++;
-                   heigh += a;
-
-                   if (heigh >= h) {
-                       System.out.println(days);
-                       break;
-
-                   }
-                   heigh -= b;
-               }
-
-   }
+        System.out.println(partToPay);
+    }
 }
