@@ -11,7 +11,21 @@ public class Spiral {
             }
             top++;
 
-            for (int i = top; i)
+            for (int i = top; i <= bottom && num <= rows * columns; i++) {
+                result[i][right] = num++;
+            }
+            right--;
+
+            for (int i = right; i>= left && num <= rows * columns; i--) {
+                result[bottom][i] = num++;
+            }
+            bottom--;
+
+            for (int i = bottom; i>= top && num <= rows * columns; i--) {
+                result[i][left] = num++;
+            }
+            left++;
         }
+        return result;
     }
 }
