@@ -1,9 +1,9 @@
 package domain;
 
-public class Dog {
+public class Cat {
 
     private String name;
-    public Dog(String name) {
+    public Cat(String name) {
         this.name = name;
     }
     public void bark() {
